@@ -1,8 +1,11 @@
 function findPalindrome (text) {
-    if (typeof text != "string") {
-        console.log("Invalid iput: String required");
+    try {
+        if (typeof text != "string") throw "Invalid iput: String required";
+    }
+    catch (err) {
+        console.log(err);
         return
-    };
+    }
 
     let word = text.match(/[a-zA_Z]+/g);
     let list = [];
@@ -40,4 +43,3 @@ function palindromeRegExp (palindromeLength) {
 /////////////
 
 findPalindrome("Anna and her mom want to do kayak this noon. They should peep the level of the river first");
-
