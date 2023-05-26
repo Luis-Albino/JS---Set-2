@@ -2,7 +2,7 @@ let regex;
 
 ////////// A) //////////
 
-regex = /[A-Z][a-z]+\s\d{2},\s\d{2}/;
+regex = /(january|february|march|april|may|june|july|august|september|october|november|dezember)\s\d{2},\s\d{4}($|\s)/gi;
 
 str = "September 29, 1972";
 if (!!str.match(regex)) {
@@ -21,7 +21,7 @@ if (!!str.match(regex)) {
 
 ////////// B) //////////
 
-regex = /\d*[a-zA-Z]\d*/;
+regex = /^((\d+[a-zA-Z])|([a-zA-Z]\d+))$/gi;
 
 str = "A52";
 if (!!str.match(regex)) {
@@ -46,7 +46,7 @@ if (!!str.match(regex)) {
 
 ////////// C) //////////
 
-regex = /[A-Za-z_0-9\.\-]+\.(txt|java|cpp){1}/;
+regex = /^[A-Za-z]+\.(txt|java|cpp)$/;
 
 str = "test.java";
 if (!!str.match(regex)) {
@@ -66,7 +66,7 @@ if (!!str.match(regex)) {
 
 ////////// D) //////////
 
-regex = /(.{1})(.{1})(.{1})\2\1$/;
+regex = /^(.)(.)(.)\2\1$/;
 
 str = "acdca";
 if (!!str.match(regex)) {
