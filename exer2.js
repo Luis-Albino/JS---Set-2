@@ -2,7 +2,7 @@ let regex;
 
 ////////// A) //////////
 
-regex = /(january|february|march|april|may|june|july|august|september|october|november|dezember)\s\d{2},\s\d{4}($|\s)/gi;
+regex = /^(January|February|March|April|May|June|July|August|September|October|November|December)\s\d{2},\s\d{4}($|\s)/g;
 
 str = "September 29, 1972";
 if (!!str.match(regex)) {
@@ -85,7 +85,7 @@ if (!!str.match(regex)) {
 
 ////////// E) //////////
 
-regex = /(^[b-yB-Y]+\s)|(\s[b-yB-Y]+\s)|(\s[b-yB-Y]+$)/g;
+regex = /\b([b-y]+)\b/gi;
 
 str = "Bee zapp Crow Eagle Zorro  mouse Ape  you";
 if (!!str.match(regex)) {
