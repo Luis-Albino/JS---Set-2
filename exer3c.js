@@ -1,11 +1,6 @@
 function findPalindrome (text) {
-    try {
-        if (typeof text != "string") throw "Invalid iput: String required";
-    }
-    catch (err) {
-        console.log(err);
-        return
-    }
+   
+    if (typeof text != "string") return undefined
 
     let word = text.match(/[a-zA_Z]+/g);
     let list = [];
