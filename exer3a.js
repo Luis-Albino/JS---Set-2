@@ -8,7 +8,7 @@ function shiftCiclically (str) {
         return options[index + 1];
     });
 
-    console.log(str);
+    return str;
 }
 
 shiftCiclically("Birthday: 08/06/1988");
