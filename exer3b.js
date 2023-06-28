@@ -1,7 +1,7 @@
 function hashtag (word,nodeElement) {
     word = word.match(/\b\w+\b/)
 
-    let text = nodeElement.innerHTML;
+    let text = nodeElement.innerText;;
     text = text.replaceAll(word,"<a href=\"https://twitter.com/search?q=%23"+word+"\">#"+word+"</a>");
     nodeElement.innerHTML = text;
 }
